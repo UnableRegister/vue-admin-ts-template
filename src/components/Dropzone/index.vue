@@ -9,7 +9,7 @@
     <div class="dropzone-custom-content">
       <h3
         class="dropzone-custom-title"
-        :style="{color: themeColor}"
+        :style="{ color: themeColor }"
       >
         Drag and drop to upload content!
       </h3>

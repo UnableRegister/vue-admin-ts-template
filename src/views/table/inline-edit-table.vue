@@ -38,7 +38,7 @@
       </el-table-column>
 
       <el-table-column class-name="status-col" label="Status" width="110">
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <el-tag :type="row.status | articleStatusFilter">
             {{ row.status }}
           </el-tag>
@@ -46,7 +46,7 @@
       </el-table-column>
 
       <el-table-column min-width="250px" label="Title">
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <template v-if="row.edit">
             <el-input v-model="row.title" class="edit-input" size="small" />
             <el-button
@@ -64,7 +64,7 @@
       </el-table-column>
 
       <el-table-column align="center" label="Actions" width="120">
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <el-button
             v-if="row.edit"
             type="success"

@@ -1,6 +1,6 @@
 <template>
   <li
-    :class="{completed: todo.done, editing: editing}"
+    :class="{ completed: todo.done, editing: editing }"
     class="todo"
   >
     <div class="view">

@@ -115,7 +115,7 @@
         </template>
       </el-table-column>
       <el-table-column :label="$t('table.title')" min-width="150px">
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <span class="link-type" @click="handleUpdate(row)">{{
             row.title
           }}</span>
@@ -148,7 +148,7 @@
         </template>
       </el-table-column>
       <el-table-column :label="$t('table.readings')" align="center" width="95">
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <span
             v-if="row.pageviews"
             class="link-type"
@@ -162,7 +162,7 @@
         class-name="status-col"
         width="100"
       >
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <el-tag :type="row.status | articleStatusFilter">
             {{ row.status }}
           </el-tag>
@@ -174,7 +174,7 @@
         width="230"
         class-name="fixed-width"
       >
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <el-button type="primary" size="mini" @click="handleUpdate(row)">
             {{ $t('table.edit') }}
           </el-button>
@@ -271,7 +271,7 @@
         <el-form-item :label="$t('table.remark')">
           <el-input
             v-model="tempArticleData.abstractContent"
-            :autosize="{minRows: 2, maxRows: 4}"
+            :autosize="{ minRows: 2, maxRows: 4 }"
             type="textarea"
             placeholder="Please input"
           />

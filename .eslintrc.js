@@ -40,7 +40,8 @@ module.exports = {
     'vue/object-curly-spacing': 'error',
     "vue/max-attributes-per-line": ["error", {
       "singleline": 4
-    }]
+    }],
+    "vue/object-curly-spacing": ["error", "always"]
   },
   overrides: [
     {

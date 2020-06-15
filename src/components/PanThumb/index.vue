@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{zIndex: zIndex, height: height, width: width}"
+    :style="{ zIndex: zIndex, height: height, width: width }"
     class="pan-item"
   >
     <div class="pan-info">
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div
-      :style="{backgroundImage: `url(${image})`}"
+      :style="{ backgroundImage: `url(${image})` }"
       class="pan-thumb"
     />
   </div>

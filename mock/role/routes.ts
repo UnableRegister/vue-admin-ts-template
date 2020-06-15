@@ -163,12 +163,6 @@ export const asyncRoutes = [
         meta: { title: 'markdown' }
       },
       {
-        path: 'json-editor',
-        component: 'views/components-demo/json-editor',
-        name: 'JsonEditorDemo',
-        meta: { title: 'jsonEditor' }
-      },
-      {
         path: 'split-pane',
         component: 'views/components-demo/split-pane',
         name: 'SplitPaneDemo',
@@ -539,27 +533,6 @@ export const asyncRoutes = [
         meta: {
           title: 'pdf',
           icon: 'pdf'
-        }
-      }
-    ]
-  },
-  {
-    path: '/pdf-download-example',
-    component: 'views/pdf/download',
-    meta: { hidden: true }
-  },
-  {
-    path: '/theme',
-    component: 'Layout',
-    redirect: 'noredirect',
-    children: [
-      {
-        path: 'index',
-        component: 'views/theme/index',
-        name: 'Theme',
-        meta: {
-          title: 'theme',
-          icon: 'theme'
         }
       }
     ]

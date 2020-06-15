@@ -25,7 +25,7 @@
       width="100"
       align="center"
     >
-      <template slot-scope="{row}">
+      <template slot-scope="{ row }">
         <el-tag :type="row.status | transactionStatusFilter">
           {{ row.status }}
         </el-tag>

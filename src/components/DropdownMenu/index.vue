@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="{active: isActive}"
+    :class="{ active: isActive }"
     class="share-dropdown-menu"
   >
     <div class="share-dropdown-menu-wrapper">

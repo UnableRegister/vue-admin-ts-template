@@ -79,7 +79,7 @@
         label="Status"
         width="110"
       >
-        <template slot-scope="{row}">
+        <template slot-scope="{ row }">
           <el-tag :type="row.status | articleStatusFilter">
             {{ row.status }}
           </el-tag>

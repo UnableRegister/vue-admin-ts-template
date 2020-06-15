@@ -19,7 +19,7 @@
         :checked="allChecked"
         class="toggle-all"
         type="checkbox"
-        @change="toggleAll({done: !allChecked})"
+        @change="toggleAll({ done: !allChecked })"
       >
       <label for="toggle-all" />
       <ul class="todo-list">
@@ -48,7 +48,7 @@
           :key="key"
         >
           <a
-            :class="{selected: visibility === key}"
+            :class="{ selected: visibility === key }"
             @click.prevent="visibility = key"
           >{{ key | capitalize }}</a>
         </li>

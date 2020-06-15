@@ -1,0 +1,29 @@
+import { RouteConfig } from 'vue-router'
+import Layout from '@/layout/index.vue'
+
+const recycleRoutes: RouteConfig = {
+  path: '/recycle',
+  component: Layout,
+  redirect: '/recycle/order-list',
+  name: 'Recycle',
+  meta: {
+    title: 'recycle',
+    icon: 'table'
+  },
+  children: [
+    {
+      path: 'recycle-list',
+      component: () => import('@/views/recycle/order-list/index.vue'),
+      name: 'OrderList',
+      meta: { title: 'recycleList' }
+    },
+    {
+      path: 'recycle-order',
+      component: () => import('@/views/recycle/order/index.vue'),
+      name: 'RecycleOrder',
+      meta: { title: 'recycleOrder' }
+    }
+  ]
+}
+
+export default recycleRoutes
