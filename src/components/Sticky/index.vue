@@ -1,8 +1,8 @@
 <template>
-  <div :style="{height: height, zIndex: zIndex}">
+  <div :style="{ height: height, zIndex: zIndex }">
     <div
       :class="className"
-      :style="{top: (isSticky ? stickyTop +'px' : ''), zIndex: zIndex, position: position, width: width, height: height}"
+      :style="{ top: (isSticky ? stickyTop +'px' : ''), zIndex: zIndex, position: position, width: width, height: height }"
     >
       <slot>
         <div>sticky</div>

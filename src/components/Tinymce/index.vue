@@ -1,8 +1,8 @@
 <template>
   <div
-    :class="{fullscreen: fullscreen}"
+    :class="{ fullscreen: fullscreen }"
     class="tinymce-container"
-    :style="{width: containerWidth}"
+    :style="{ width: containerWidth }"
   >
     <tinymce-editor
       :id="id"

@@ -3,6 +3,8 @@ import Vue, { DirectiveOptions } from 'vue'
 import 'normalize.css'
 import ElementUI from 'element-ui'
 import SvgIcon from 'vue-svgicon'
+// flex 布局库
+import 'flex.css'
 
 import '@/styles/element-variables.scss'
 import '@/styles/index.scss'
@@ -19,6 +21,8 @@ import '@/pwa/register-service-worker'
 import * as directives from '@/directives'
 import * as filters from '@/filters'
 import D2Crud from '@d2-projects/d2-crud'
+import PageContainer from '@/components/PageContainer/index.vue'
+import Pagination from '@/components/Pagination/index.vue'
 
 Vue.use(ElementUI, {
   size: AppModule.size, // Set element-ui default size
@@ -33,14 +37,18 @@ Vue.use(SvgIcon, {
   defaultHeight: '1em'
 })
 
+// 按需引入 v-charts，echarts 的 vue 封装
+Vue.component('page-container', PageContainer)
+Vue.component('pagination', Pagination)
+
 // Register global directives
-Object.keys(directives).forEach(key => {
-  Vue.directive(key, (directives as { [key: string ]: DirectiveOptions })[key])
+Object.keys(directives).forEach((key) => {
+  Vue.directive(key, (directives as { [key: string]: DirectiveOptions })[key])
 })
 
 // Register global filter functions
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, (filters as { [key: string ]: Function })[key])
+Object.keys(filters).forEach((key) => {
+  Vue.filter(key, (filters as { [key: string]: Function })[key])
 })
 
 Vue.config.productionTip = false

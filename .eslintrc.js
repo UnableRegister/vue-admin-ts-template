@@ -31,7 +31,9 @@ module.exports = {
     'vue/arrow-spacing': 'error',
     'vue/block-spacing': 'error',
     'vue/brace-style': 'error',
-    'vue/camelcase': 'error',
+    'vue/camelcase': 'off',
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
     'vue/comma-dangle': 'error',
     'vue/component-name-in-template-casing': 'error',
     'vue/eqeqeq': 'error',
@@ -40,7 +42,8 @@ module.exports = {
     'vue/object-curly-spacing': 'error',
     "vue/max-attributes-per-line": ["error", {
       "singleline": 4
-    }]
+    }],
+    "vue/object-curly-spacing": ["error", "always"]
   },
   overrides: [
     {

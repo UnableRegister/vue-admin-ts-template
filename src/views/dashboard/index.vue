@@ -1,33 +1,24 @@
 <template>
-  <div class="dashboard-container">
-    <component :is="currentRole" />
-  </div>
+  <page-container>
+    <chart />
+  </page-container>
 </template>
 
 <script lang="ts">
+import 'echarts/theme/macarons.js'
 import { Component, Vue } from 'vue-property-decorator'
-import { UserModule } from '@/store/modules/user'
-import AdminDashboard from './admin/index.vue'
-import EditorDashboard from './editor/index.vue'
+import Chart from './components/Chart.vue'
 
 @Component({
   name: 'Dashboard',
   components: {
-    AdminDashboard,
-    EditorDashboard
+    Chart
   }
 })
-export default class extends Vue {
-    private currentRole = 'admin-dashboard'
-
-    get roles() {
-      return UserModule.roles
-    }
-
-    created() {
-      if (!this.roles.includes('admin')) {
-        this.currentRole = 'editor-dashboard'
-      }
-    }
-}
+export default class extends Vue {}
 </script>
+
+<style lang="stylus" scoped>
+>>>.page-container__body
+  padding 0 !impotant
+</style>

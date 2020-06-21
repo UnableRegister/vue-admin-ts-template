@@ -35,7 +35,7 @@
         border
       >
         <el-table-column label="Message">
-          <template slot-scope="{row}">
+          <template slot-scope="{ row }">
             <div>
               <span class="message-title">Msg:</span>
               <el-tag type="danger">

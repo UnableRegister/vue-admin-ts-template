@@ -6,12 +6,9 @@
       class="hamburger-container"
       @toggleClick="toggleSideBar"
     />
-    <breadcrumb
-      id="breadcrumb-container"
-      class="breadcrumb-container"
-    />
+    <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
     <div class="right-menu">
-      <template v-if="device!=='mobile'">
+      <template v-if="device !== 'mobile'">
         <header-search class="right-menu-item" />
         <error-log class="errLog-container right-menu-item hover-effect" />
         <screenfull class="right-menu-item hover-effect" />
@@ -29,42 +26,20 @@
         trigger="click"
       >
         <div class="avatar-wrapper">
-          <img
-            :src="avatar+'?imageView2/1/w/80/h/80'"
-            class="user-avatar"
-          >
-          <i class="el-icon-caret-bottom" />
+          <!-- <img :src="avatar + '?imageView2/1/w/80/h/80'" class="user-avatar" /> -->
+          <div class="user-name">
+            你好 集客部
+          </div>
+          <!-- <i class="el-icon-caret-bottom" /> -->
         </div>
         <el-dropdown-menu slot="dropdown">
-          <router-link to="/profile/">
-            <el-dropdown-item>
-              {{ $t('navbar.profile') }}
-            </el-dropdown-item>
-          </router-link>
           <router-link to="/">
             <el-dropdown-item>
               {{ $t('navbar.dashboard') }}
             </el-dropdown-item>
           </router-link>
-          <a
-            target="_blank"
-            href="https://github.com/armour/vue-typescript-admin-template/"
-          >
-            <el-dropdown-item>
-              {{ $t('navbar.github') }}
-            </el-dropdown-item>
-          </a>
-          <a
-            target="_blank"
-            href="https://armour.github.io/vue-typescript-admin-docs/"
-          >
-            <el-dropdown-item>Docs</el-dropdown-item>
-          </a>
-          <el-dropdown-item
-            divided
-            @click.native="logout"
-          >
-            <span style="display:block;">
+          <el-dropdown-item divided @click.native="logout">
+            <span style="display: block;">
               {{ $t('navbar.logOut') }}
             </span>
           </el-dropdown-item>
@@ -128,7 +103,7 @@ export default class extends Vue {
   overflow: hidden;
   position: relative;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 
   .hamburger-container {
     line-height: 46px;
@@ -136,11 +111,11 @@ export default class extends Vue {
     float: left;
     padding: 0 15px;
     cursor: pointer;
-    transition: background .3s;
-    -webkit-tap-highlight-color:transparent;
+    transition: background 0.3s;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
-      background: rgba(0, 0, 0, .025)
+      background: rgba(0, 0, 0, 0.025);
     }
   }
 
@@ -172,10 +147,10 @@ export default class extends Vue {
 
       &.hover-effect {
         cursor: pointer;
-        transition: background .3s;
+        transition: background 0.3s;
 
         &:hover {
-          background: rgba(0, 0, 0, .025)
+          background: rgba(0, 0, 0, 0.025);
         }
       }
     }
@@ -186,6 +161,11 @@ export default class extends Vue {
       .avatar-wrapper {
         margin-top: 5px;
         position: relative;
+
+        .user-name {
+          line-height: 40px;
+          font-size: 14px;
+        }
 
         .user-avatar {
           cursor: pointer;

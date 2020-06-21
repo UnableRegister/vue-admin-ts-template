@@ -1,7 +1,7 @@
 <template>
   <div class="draggableList">
     <div
-      :style="{width: list1width}"
+      :style="{ width: list1width }"
       class="draggableList-list"
     >
       <h3>{{ list1Title }}</h3>
@@ -33,7 +33,7 @@
       </draggable>
     </div>
     <div
-      :style="{width: list2width}"
+      :style="{ width: list2width }"
       class="draggableList-list"
     >
       <h3>{{ list2Title }}</h3>

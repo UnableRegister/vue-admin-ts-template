@@ -1,7 +1,7 @@
 <template>
   <div
     id="header-search"
-    :class="{'show': show}"
+    :class="{ 'show': show }"
     class="header-search"
   >
     <svg-icon

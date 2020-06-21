@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'has-logo': showLogo}">
+  <div :class="{ 'has-logo': showLogo }">
     <sidebar-logo
       v-if="showLogo"
       :collapse="isCollapse"

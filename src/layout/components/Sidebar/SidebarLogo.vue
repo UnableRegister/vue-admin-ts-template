@@ -1,7 +1,7 @@
 <template>
   <div
     class="sidebar-logo-container"
-    :class="{'collapse': collapse}"
+    :class="{ 'collapse': collapse }"
   >
     <transition name="sidebarLogoFade">
       <router-link

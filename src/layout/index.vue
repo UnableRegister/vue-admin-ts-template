@@ -1,26 +1,17 @@
 <template>
-  <div
-    :class="classObj"
-    class="app-wrapper"
-  >
+  <div :class="classObj" class="app-wrapper">
     <div
       v-if="classObj.mobile && sidebar.opened"
       class="drawer-bg"
       @click="handleClickOutside"
     />
     <sidebar class="sidebar-container" />
-    <div
-      :class="{hasTagsView: showTagsView}"
-      class="main-container"
-    >
-      <div :class="{'fixed-header': fixedHeader}">
+    <div class="hasTagsView main-container">
+      <div class="fixed-header">
         <navbar />
         <tags-view v-if="showTagsView" />
       </div>
       <app-main />
-      <right-panel v-if="showSettings">
-        <settings />
-      </right-panel>
     </div>
   </div>
 </template>
@@ -30,8 +21,7 @@ import { Component } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
 import { DeviceType, AppModule } from '@/store/modules/app'
 import { SettingsModule } from '@/store/modules/settings'
-import { AppMain, Navbar, Settings, Sidebar, TagsView } from './components'
-import RightPanel from '@/components/RightPanel/index.vue'
+import { AppMain, Navbar, Sidebar, TagsView } from './components'
 import ResizeMixin from './mixin/resize'
 
 @Component({
@@ -39,8 +29,6 @@ import ResizeMixin from './mixin/resize'
   components: {
     AppMain,
     Navbar,
-    RightPanel,
-    Settings,
     Sidebar,
     TagsView
   }
@@ -92,8 +80,10 @@ export default class extends mixins(ResizeMixin) {
 }
 
 .main-container {
-  min-height: 100%;
-  transition: margin-left .28s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: margin-left 0.28s;
   margin-left: $sideBarWidth;
   position: relative;
 }
@@ -112,11 +102,11 @@ export default class extends mixins(ResizeMixin) {
 }
 
 .fixed-header {
-  position: fixed;
-  top: 0;
-  right: 0;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
   z-index: 9;
-  width: calc(100% - #{$sideBarWidth});
+  // width: calc(100% - #{$sideBarWidth});
   transition: width 0.28s;
 }
 
@@ -130,7 +120,7 @@ export default class extends mixins(ResizeMixin) {
   }
 
   .fixed-header {
-    width: calc(100% - 54px)
+    width: calc(100% - 54px);
   }
 }
 
@@ -141,7 +131,7 @@ export default class extends mixins(ResizeMixin) {
   }
 
   .sidebar-container {
-    transition: transform .28s;
+    transition: transform 0.28s;
     width: $sideBarWidth !important;
   }
 

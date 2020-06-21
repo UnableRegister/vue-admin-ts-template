@@ -1,7 +1,7 @@
 <template>
   <div class="upload-container">
     <el-button
-      :style="{background: color, borderColor: color}"
+      :style="{ background: color, borderColor: color }"
       icon="el-icon-upload"
       size="mini"
       type="primary"

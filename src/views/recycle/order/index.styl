@@ -1,0 +1,171 @@
+/*
+ * @Author: Wind Rises
+ * @Date: 2020-06-21 14:11:53
+ * @Last Modified by: Wind Rises
+ * @Last Modified time: 2020-06-21 16:04:23
+ */
+.page-content
+  width 1200px
+
+.step-container
+  margin 0 -50px
+  padding-top 20px
+  margin-bottom 30px
+
+.order-status-container
+  margin-bottom 18px
+  padding-right 30px
+  padding-left 30px
+  box-sizing border-box
+  line-height 50px
+  background-color #f9fafc
+
+  .order-status
+    color #67C23A
+    font-size 18px
+    font-weight 450
+
+section
+  margin-bottom 20px
+  padding-left 30px
+  width 1170px
+
+  .title
+    position relative
+    padding-left 20px
+    font-size 16px
+    font-weight 600
+    color #333333
+    line-height 40px
+
+    &:after
+      position absolute
+      content ''
+      top 12px
+      left 0
+      width 4px
+      height 16px
+      background-color #666
+
+.baseinfo-table, .user-table, .express-table
+  height 105px
+  border 1px solid #e4e4e4
+  border-right-width 0
+
+  div, span
+    box-sizing border-box
+
+  .table-content>.cell, .table-header>.cell
+    padding 0 10px
+    width 190px
+    color #666
+    font-size 14px
+    border-right 1px solid #e4e4e4
+
+  .table-header>.cell
+    height 45px
+    font-weight 650
+    background-color #f9fafc
+    border-bottom 1px solid #e4e4e4
+
+  .table-content>.cell
+    height 60px
+
+.user-table
+  border-top-width 0
+
+  .cell.address
+    width 760px
+
+.express-table
+  .table-content>.cell, .table-header>.cell
+    &:nth-of-type(1), &:nth-of-type(2)
+      width 180px
+
+    &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5)
+      width 150px
+
+    &:nth-of-type(6)
+      width 330px
+
+.page-footer
+  margin -10px
+  width 1200px
+  height 110px
+  border 1px solid #e4e4e4
+  border-right-width 0
+
+  .table-content>.cell, .table-header>.cell
+    padding 0 10px
+    color #666
+    font-size 14px
+    border-right 1px solid #e4e4e4
+
+    &:nth-of-type(1)
+      width 110px
+
+    &:nth-of-type(2)
+      width 110px
+
+    &:nth-of-type(3)
+      width 110px
+
+    &:nth-of-type(4)
+      width 160px
+
+    &:nth-of-type(5)
+      width 150px
+
+    &:nth-of-type(6)
+      width 170px
+
+    &:nth-of-type(7)
+      width 170px
+
+    &:nth-of-type(8)
+      width 220px
+
+  .table-header>.cell
+    height 50px
+    font-weight 650
+    background-color #f9fafc
+    border-bottom 1px solid #e4e4e4
+
+  .table-content>.cell
+    height 60px
+
+    .handle-wrap
+      padding 0 10px
+      width 100%
+      display flex
+      justify-content space-around
+
+      &:hover
+        cursor pointer
+
+      span
+        color #0099FF
+        line-height 60px
+
+        &.close
+          color red
+
+>>>.d2-crud .d2-crud-body
+  padding 0 !important
+
+  .el-table__header
+    th
+      background-color #f9fafc !important
+
+    .cell
+      color #666
+      font-size 14px
+      font-weight 650
+
+  .el-table__body-wrapper
+    .el-table__row
+      height 60px
+      font-size 14px
+
+  .el-step.is-center .el-step__description
+    padding 0

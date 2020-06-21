@@ -89,6 +89,16 @@ aside {
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.f-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fixed-width {
   .el-button--mini {
     padding: 7px 10px;
