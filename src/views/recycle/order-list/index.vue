@@ -2,7 +2,7 @@
  * @Author: Wind Rises
  * @Date: 2020-05-24 16:13:27
  * @Last Modified by: Wind Rises
- * @Last Modified time: 2020-06-21 16:14:40
+ * @Last Modified time: 2020-06-21 17:41:52
  */
 <template>
   <page-container>
@@ -127,7 +127,7 @@
           size="small"
           :disabled="!Boolean(remark.trim().length)"
           @click="closeOrder"
-        >关闭订单
+          >关闭订单
         </el-button>
         <el-button
           v-else
@@ -135,7 +135,7 @@
           size="small"
           :disabled="!Boolean(remark.trim().length)"
           @click="addRemark"
-        >添加备注
+          >添加备注
         </el-button>
       </span>
     </el-dialog>
@@ -151,7 +151,7 @@
   </page-container>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import PaginationPage from '@/models/page'
 
@@ -722,6 +722,6 @@ class OrderList extends Vue {
 export default OrderList
 </script>
 
-<style lang='stylus' scoped>
-@import './index.styl'
+  <style lang="stylus" scoped>
+  @import './index.styl'
 </style>

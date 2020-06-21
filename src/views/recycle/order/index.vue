@@ -2,7 +2,7 @@
  * @Author: Wind Rises
  * @Date: 2020-06-15 20:40:31
  * @Last Modified by: Wind Rises
- * @Last Modified time: 2020-06-21 16:15:02
+ * @Last Modified time: 2020-06-21 17:43:29
  */
 <template>
   <page-container>
@@ -270,8 +270,7 @@
     </div>
   </page-container>
 </template>
-
-<script lang='ts'>
+<script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component
@@ -763,6 +762,6 @@ class Order extends Vue {
 export default Order
 </script>
 
-<style lang='stylus' scoped>
-@import './index.styl'
+    <style lang="stylus" scoped>
+    @import './index.styl'
 </style>
