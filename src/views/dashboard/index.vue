@@ -17,8 +17,3 @@ import Chart from './components/Chart.vue'
 })
 export default class extends Vue {}
 </script>
-
-<style lang="stylus" scoped>
->>>.page-container__body
-  padding 0 !impotant
-</style>

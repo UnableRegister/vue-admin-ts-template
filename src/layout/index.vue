@@ -120,7 +120,7 @@ export default class extends mixins(ResizeMixin) {
   }
 
   .fixed-header {
-    width: calc(100% - 54px);
+    // width: calc(100% - 54px);
   }
 }
 

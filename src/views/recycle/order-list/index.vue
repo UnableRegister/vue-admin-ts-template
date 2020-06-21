@@ -127,7 +127,7 @@
           size="small"
           :disabled="!Boolean(remark.trim().length)"
           @click="closeOrder"
-          >关闭订单
+        >关闭订单
         </el-button>
         <el-button
           v-else
@@ -135,7 +135,7 @@
           size="small"
           :disabled="!Boolean(remark.trim().length)"
           @click="addRemark"
-          >添加备注
+        >添加备注
         </el-button>
       </span>
     </el-dialog>
