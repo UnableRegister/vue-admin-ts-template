@@ -18,10 +18,11 @@ const recycleRoutes: RouteConfig = {
       meta: { title: 'recycleList' }
     },
     {
-      path: 'recycle-order',
+      path: 'recycle-order/:id',
       component: () => import('@/views/recycle/order/index.vue'),
       name: 'RecycleOrder',
-      meta: { title: 'recycleOrder' }
+      meta: { title: 'recycleOrder' },
+      props: true
     }
   ]
 }

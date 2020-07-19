@@ -1,8 +1,8 @@
 /*
  * @Author: Wind Rises
  * @Date: 2020-06-15 20:40:31
- * @Last Modified by: Wind Rises
- * @Last Modified time: 2020-06-21 17:43:29
+ * @Last Modified by: 9k
+ * @Last Modified time: 2020-07-19 15:49:27
  */
 <template>
   <page-container>
@@ -23,7 +23,7 @@
           />
         </el-steps>
       </div>
-      <div class="order-status-container">
+      <div class="order-status-container" flex="main:justify">
         <div class="order-status">
           订单当前状态:待取件
         </div>
@@ -178,7 +178,7 @@
         width="420px"
       >
         <div class="dialog-content">
-          <el-timeline :reverse="reverse">
+          <el-timeline :reverse="true">
             <el-timeline-item
               v-for="(activity, index) in remarkList"
               :key="index"
@@ -271,10 +271,12 @@
   </page-container>
 </template>
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'vue-property-decorator'
 
 @Component
 class Order extends Vue {
+  @Prop({ required: true }) private id!: string
+
   stepActive = 3
   steps: any[] = [
     {
@@ -677,6 +679,10 @@ class Order extends Vue {
       label: '订单金额未达到回收门槛，请继续添加'
     }
   ]
+
+  created() {
+    console.log('created', this.id)
+  }
 
   getResultTableHeader(key: string) {
     const map: any = {

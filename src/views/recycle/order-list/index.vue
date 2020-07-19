@@ -1,8 +1,8 @@
 /*
  * @Author: Wind Rises
  * @Date: 2020-05-24 16:13:27
- * @Last Modified by: Wind Rises
- * @Last Modified time: 2020-06-21 17:41:52
+ * @Last Modified by: 9k
+ * @Last Modified time: 2020-07-19 15:34:25
  */
 <template>
   <page-container>
@@ -42,7 +42,7 @@
           <el-input v-model="input" placeholder="请输入" size="small" />
         </div>
         <div class="select-wrap-2" flex="cross:center">
-          <div class="order-type">
+          <div class="order-type label">
             订单类型:
           </div>
           <el-select
@@ -61,7 +61,7 @@
           </el-select>
         </div>
         <div class="date-wrap" flex="cross:center">
-          <div class="order-time">
+          <div class="order-time label">
             下单时间:
           </div>
           <el-date-picker
@@ -98,7 +98,7 @@
       width="420px"
     >
       <div class="dialog-content">
-        <el-timeline :reverse="reverse">
+        <el-timeline :reverse="true">
           <el-timeline-item
             v-for="(activity, index) in remarkList"
             :key="index"
@@ -704,7 +704,8 @@ class OrderList extends Vue {
 
   gotoOrder(id: string) {
     console.log('goto order')
-    this.$router.push(`/recycle/order/${id}`)
+    // this.$router.push('/recycle/recycle-order')
+    this.$router.push(`/recycle/recycle-order/${id}`)
   }
 
   openRemarkDailog(id: string, actionType: 'close' | 'remark') {
