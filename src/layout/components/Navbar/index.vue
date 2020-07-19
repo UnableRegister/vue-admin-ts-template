@@ -12,14 +12,14 @@
         <header-search class="right-menu-item" />
         <error-log class="errLog-container right-menu-item hover-effect" />
         <screenfull class="right-menu-item hover-effect" />
-        <el-tooltip
+        <!-- <el-tooltip
           :content="$t('navbar.size')"
           effect="dark"
           placement="bottom"
         >
           <size-select class="right-menu-item hover-effect" />
-        </el-tooltip>
-        <lang-select class="right-menu-item hover-effect" />
+        </el-tooltip> -->
+        <!-- <lang-select class="right-menu-item hover-effect" /> -->
       </template>
       <el-dropdown
         class="avatar-container right-menu-item hover-effect"
@@ -33,11 +33,11 @@
           <!-- <i class="el-icon-caret-bottom" /> -->
         </div>
         <el-dropdown-menu slot="dropdown">
-          <router-link to="/">
+          <!-- <router-link to="/">
             <el-dropdown-item>
               {{ $t('navbar.dashboard') }}
             </el-dropdown-item>
-          </router-link>
+          </router-link> -->
           <el-dropdown-item divided @click.native="logout">
             <span style="display: block;">
               {{ $t('navbar.logOut') }}

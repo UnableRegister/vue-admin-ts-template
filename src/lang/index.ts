@@ -39,7 +39,7 @@ export const getLocale = () => {
   }
 
   // Default language is english
-  return 'en'
+  return 'zh'
 }
 
 const i18n = new VueI18n({
