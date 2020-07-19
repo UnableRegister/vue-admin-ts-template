@@ -91,12 +91,17 @@ export default class PageCantainer extends Vue {
   overflow: hidden;
   .page-container__header {
     padding: 20px;
+    background-color: #fafafa;
   }
   .page-container__body {
     flex-grow: 1;
     padding: 20px 20px;
     overflow: auto;
     position: relative;
+    background-color: #fafafa;
+  }
+  .page-container__body::-webkit-scrollbar {
+    display: none;
   }
   .page-container__footer {
     padding: 20px;
